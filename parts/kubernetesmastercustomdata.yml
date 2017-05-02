@@ -11,13 +11,14 @@ disk_setup:
   /dev/sdc:
       table_type: gpt
       layout: true
-      overwrite: true
+      overwrite: false
 
 fs_setup:
-- special:
-  cmd: /sbin/mkfs.ext4 /dev/sdc1 -F -E lazy_itable_init=1,lazy_journal_init=1
+- label: etcd
   filesystem: ext4
   device: /dev/sdc1
+  overwrite: false
+  extra_opts: ["-E", "lazy_itable_init=1,lazy_journal_init=1"]
 
 mounts:
 - - /dev/sdc1
