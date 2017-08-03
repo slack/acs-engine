@@ -10,12 +10,9 @@ test/acs-engine-test/acs-engine-test
 .editorconfig
 _dist/
 bin/
-<<<<<<< HEAD
 .env
 dev.json
 kubernetes.json
-=======
->>>>>>> Changes from PR
 test/acs-engine-test/acs-engine-test.exe
 pkg/operations/junit.xml
 pkg/operations/kubernetesupgrade/junit.xml
