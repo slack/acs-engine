@@ -16,6 +16,26 @@
         "vmSize": "Standard_D2_v2",
         "storageProfile" : "ManagedDisks",
         "diskSizesGB": [128, 128, 128, 128],
+	"diskProfiles": [
+		# managed
+		{
+			"size": 128,
+			"format": true,
+			"fsType": "ext4",
+			"mount": "/mnt/disk1"
+		},
+		{
+			"size": 128,
+			"device": "/dev/sdc1",
+			"fsLabel": "12938109283"
+		},
+		# ephemeral
+		{
+			"device": "ephemeral0",
+			"format": true,
+			"mount": "/mnt/ssd1"
+		}
+	],
         "availabilityProfile": "AvailabilitySet"
       }
     ],
